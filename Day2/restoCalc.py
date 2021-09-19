@@ -2,10 +2,14 @@
 # Designed to run once for one set of data
 
 
+def getBilTotalStdin(billTotalFloat=-1):
+  while billTotalFloat < 0:
+    billTotalFloat = float(input("Bill total: "))
+  
+  return billTotalFloat
 
 
-
-billTotalFloat=float(input("Enter Bill total: "))
+billTotalFloat=getBilTotalStdin()
 
 splitYN=input("Split Bill? y/n")
 
@@ -15,7 +19,6 @@ billTotalPerPayer=float(billTotalFloat)
 
 
 if splitYN.lower() in ['y','ye','yes']:
-  sad=True
   splitBy=input("Enter divisor for bill split: ")
   billTotalPerPayer=billTotalPerPayer / float(splitBy)
 

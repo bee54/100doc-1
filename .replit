@@ -1,2 +1,2 @@
 language = "python3"
-run = "python Day2/restoCalc_Test.py"
+run = "python Day2/restoCalc.py"
