@@ -1,5 +1,7 @@
 This repo will contain as many single file and small, flat-hierarchy python projects as possible for a 100 days of code challenge.
 
+Each folder has a README in it.
+
 
 ===Notes about connecting with Replit===
 My replit.com "Repl" was locked as a bash project.
