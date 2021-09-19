@@ -4,9 +4,13 @@
 #
 
 def scramble(petNameFromMain, randomizerSeedFromMain):
-  for x in range(0, length(petName)):
-    petName[x]++
-  return petName
+  
+  petNameRandomizerString=""
+
+
+  for x in range(0, len(petNameFromMain)):
+    petNameRandomizerString += chr(ord(petNameFromMain[x]) + randomizerSeedFromMain)
+  return petNameRandomizerString
 
 
 print("Alternative business name generator: ")
@@ -16,4 +20,4 @@ cityName = input("Input a name for a city: ")
 petName = input("Input a name for a pet: ")
 randomizerSeed=int(input("Enter an int: "))
 
-print(cityName + scramble(petName, randomizerSeed))
+print(cityName[1:len(cityName):] + cityName[0] + " " + scramble(petName, randomizerSeed))
