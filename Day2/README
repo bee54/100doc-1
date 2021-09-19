@@ -1,1 +1,3 @@
-Calculates restaurant totals
+Day2 Calculates restaurant totals and can split the bill
+
+One test was done, to make sure 1 payer pays original bill total times tax and so exactly do multiple payers.
