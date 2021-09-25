@@ -26,9 +26,9 @@ def runGame():
 
   if computerChoice == playerChoice: # If its a tie
     print("Tie")
-  elif computerChoice > playerChoice or computerChoice % 2 == playerChoice:
+  elif computerChoice > playerChoice or (computerChoice % 2 == playerChoice): # IF computerChoice==2
     print("Computer WINS")
-  elif computerChoice > playerChoice or computerChoice  == playerChoice % 2:
+  elif computerChoice > playerChoice or computerChoice  == playerChoice % 2:  # IF playerChoice==2
     print("Player WINS")
 
 
