@@ -1,0 +1,29 @@
+def goToNextHurdle():
+    #Why specify this one? It may be more difficult to go to the hurdle in another map.
+    move()
+
+
+def turnRight():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+    
+
+def goOverAHurdle():
+    turn_left()
+    move()
+    turnRight()
+    move()
+    turnRight()
+    move()
+    turn_left() #Wasted move on flag
+    
+    
+
+for x in range(0,6):
+    goToNextHurdle()
+    goOverAHurdle()
+    
+
