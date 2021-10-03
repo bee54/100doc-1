@@ -1,20 +1,11 @@
 # Auction
 #
-# Should have used a dictionary type instead of all this stuff with classes
+# Should have used a dictionary type instead of a class but at least mine is extensible(?)
 
+from replit import clear # Import screen wipe "clear()"
 
-print()
-print("(\\") 
-print("\\'\\")
-print(" \\'\\     __________ ")
-print(" / '|   ()_________)")
-print(" \\ '/    \\ ~~~~~~~~ \\")
-print("   \\       \\ ~~~~~~   \\")
-print("   ==).      \\__________\\")
-print("  (__)       ()__________))")
+import title_screen # Write the title screen
 
-print("\nAuction House")
-print("=============================================")
 
 class Participant:
   def __init__(self, name, bid):
@@ -22,7 +13,7 @@ class Participant:
     self.bid = bid
 
 
-def getParticipant():
+def makeParticipant():
   
   participantName=input("Enter name: ")
 
@@ -43,8 +34,11 @@ def gatherParticipantList():
   
   while(getNewPariticipant=='y'):
     # Get participant info and load 
-    participantList.append(getParticipant())
+    participantList.append(makeParticipant())
     getNewPariticipant=input("Any other bidders? (y/n) ")
+    clear()
+
+    
 
   return participantList
 
@@ -54,7 +48,7 @@ def getHighestBidFromParticipantList(gatheredParticipantList):
   
   highestBid=0
 
-  winningParticipant=None
+  winningParticipant= gatheredParticipantList[0] if len(gatheredParticipantList)==1 else None
   
   for participant in gatheredParticipantList:
     
@@ -65,7 +59,7 @@ def getHighestBidFromParticipantList(gatheredParticipantList):
   return winningParticipant
 
 def printWinner(winningParticipant):
-  print(winningParticipant.name, end='')
+  print(winningParticipant.name, end='') 
   print(" won the auction with a bid of $", end='')
   print(winningParticipant.bid, end='')
 

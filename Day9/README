@@ -1,0 +1,15 @@
+Auction program collects participant names and bids and announces the highest bid.
+
+
+Bug1 solved:
+When user name is 0 and bid is <= 0, it says
+"AttributeError: 'NoneType' object has no attribute 'name'"
+
+Bug1 FIX by taking winningParticipant= gatheredParticipantList[0] if len(gatheredParticipantList)==1 else None
+
+Bug 2 outstanding:
+Participant can offer negative and 0 dollar bids.
+
+Bug 3 outstanding:
+Participant can win auctions with negative bids.
+
